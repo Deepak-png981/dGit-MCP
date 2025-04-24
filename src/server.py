@@ -18,7 +18,7 @@ def git_checkout(branch_name: str) -> str:
         branch_name: Name of the branch to checkout
     """
     try:
-        result = subprocess.run(['git', 'checkout', branch_name], 
+        result = subprocess.run(['git', 'checkout',"-b", branch_name], 
                               capture_output=True, 
                               text=True)
         if result.returncode == 0:
